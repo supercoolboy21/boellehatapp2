@@ -1,0 +1,110 @@
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bøllehat Konfigurator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .selector {
+      margin: 20px 0;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #hat-preview {
+      margin-top: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    #hat-image {
+      width: 300px;
+    }
+
+    #icon-image {
+      position: absolute;
+      top: 62px; /* Justér for korrekt placering på hatten */
+      left: 110px;
+      width: 80px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Design din egen bøllehat 🎨🧢</h1>
+
+  <div class="selector">
+    <label for="color">Vælg farve:</label>
+    <select id="color">
+      <option value="">-- Vælg en farve --</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385186958157938719/1DQYlFZ.png?ex=68552762&is=6853d5e2&hm=e3fca42fa750a146d936e546c8a7ae21c0b23853202f046b34e80dfa45613771&">Rød</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385186982006620180/iAyv23D.png?ex=68552768&is=6853d5e8&hm=ac4444458556208c6115e282e4c700ec195010b5ba1dcf24415611c73aa47b10&">Blå</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385187008971804713/ZAc74PP.png?ex=6855276e&is=6853d5ee&hm=97a9b7279dfb31342a3346fe77a09363189d6024d5763556e3db077558f8d8ea&">Grøn</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385187060197097492/QYyfQon.png?ex=6855277a&is=6853d5fa&hm=c48e67c3bac4c16522f0b8600c23d518cde4dbcfc55a0d3ec11e469b062ebf82&">Gul</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385187100349169745/rSwLvzW.png?ex=68552784&is=6853d604&hm=9cf08e04edd208583475a2ecfdcbd8221bee81e32fe52299158ea7aed93f22fb&">Orange</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385187140958294077/VDFJR8G.png?ex=6855278d&is=6853d60d&hm=b9febce731df42c60a7da5e10f15fa6639adcf67ce607636cf15722bf21496a6&">Lyseblå</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385186660739846265/XtRSM1w.png?ex=6855271b&is=6853d59b&hm=4fd7b2571c86f24960ab8acf561e735648c802ea2b49719dec4a0e92e37fa30c&">Lilla</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385193426152194068/RiRGfGU.png?ex=68552d68&is=6853dbe8&hm=dda8727debb3bf5411e61ef935f813e0e6c30f9ec6d9a606a01b72d6dd6ce935&">Mærkerød</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385193447605927986/vLlSemz.png?ex=68552d6d&is=6853dbed&hm=b53487b1ea2a625d749b6bd79579afe2212cb77f0130191caa455af6a7687074&">Mærkegrøn</option>
+    </select>
+  </div>
+
+  <div class="selector">
+    <label for="icon">Vælg motiv:</label>
+    <select id="icon">
+      <option value="">-- Vælg et ikon --</option>
+      <!-- Blomster -->
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197598763122771/Vmhrman.png?ex=6855314b&is=6853dfcb&hm=e665bdc56bc7d906e2d13fe28d0456358ced827a5de083483a5d73cf84729445&">Norge Bergfrue</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197611731914805/k2O1p9m.png?ex=6855314e&is=6853dfce&hm=2dbe20b05db6817fc48ad866047672d4d72dd37280e4c0aa0f8cd029df9788d0&">Japan kirsebærblomst</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197627959803925/Ik2F7Pb.png?ex=68553152&is=6853dfd2&hm=5fcf35b70e89cbd9337ea3c3859a0bfb1442599054954683bbd15ba0bd2d342f&">Italien Viol</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197643130736710/vTHRJwE.png?ex=68553155&is=6853dfd5&hm=6bb70480370188e9eb56546b35e530af6c2f0d99f14f980e61f0fa94fc80928a&">Danmark marguerit 4</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197730690891839/Grmduzg.png?ex=6855316a&is=6853dfea&hm=859095497c4a7564c7176e23bc376c4aeca15e28d80b758152a95a654f853ac1&">USA rose 5</option>
+      <!-- Sundhed/Aktivitet -->
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197450817568899/WR7zt8j.png?ex=68553127&is=6853dfa7&hm=4918badd760bdf1208786eb30c2de20d215b9ae67705148b097cce025cdea03b&">Sundhed 1</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197467133284392/OquZyGU.png?ex=6855312b&is=6853dfab&hm=cff23ce224e4e5ac9f7392e7fb53597e79cd07fd1266d6167b914f883d84e9d4&">Sundhed 2</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197506358673458/AYj2X0s.png?ex=68553135&is=6853dfb5&hm=bdb3e4f8a94fe9d2cc20c0c8dac1cd0c9a8092a235d7cda1631297fb1de326a4&">Sundhed 3</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197575401111633/L08BcdD.png?ex=68553145&is=6853dfc5&hm=b5c0e4c1650b337a99a3f8115d8dbf1748446863b1f8690359b9e33f216767f2&">Sundhed 4</option>
+      <option value="https://cdn.discordapp.com/attachments/757957519019868186/1385197704979677214/Fmf7Ckw.png?ex=68553164&is=6853dfe4&hm=44e9ee635e5a2de0c4c31e9fa71bfdd09afba6f272dd40df9d6a9eb58f349658&">Sundhed 5</option>
+    </select>
+  </div>
+
+  <div id="hat-preview">
+    <img id="hat-image" src="" alt="Din bøllehat" />
+    <img id="icon-image" src="" alt="Motiv" />
+  </div>
+
+  <script>
+    const colorSelect = document.getElementById('color');
+    const iconSelect = document.getElementById('icon');
+    const hatImage = document.getElementById('hat-image');
+    const iconImage = document.getElementById('icon-image');
+
+    colorSelect.addEventListener('change', () => {
+      hatImage.src = colorSelect.value;
+    });
+
+    iconSelect.addEventListener('change', () => {
+      iconImage.src = iconSelect.value;
+    });
+  </script>
+
+</body>
+</html>
